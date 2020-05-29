@@ -8,14 +8,15 @@
 
 import SwiftUI
 
-struct HyponatremiaView: View {
+struct HyponatremiaCausesView: View {
     var body: some View {
-        Text("Hyponatremia")
+       Text("Hyponatremia")
+       
     }
 }
 
 struct HyponatremiaView_Previews: PreviewProvider {
     static var previews: some View {
-        HyponatremiaView()
+        HyponatremiaCausesView()
     }
 }

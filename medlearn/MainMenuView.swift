@@ -10,7 +10,15 @@ import SwiftUI
 
 struct MainMenuView: View {
     var body: some View {
-        Text("Hello, World")
+        NavigationView {
+            List {
+                NavigationLink(destination: HyponatremiaCausesView()) {
+                    Text("Hyponatremia - determine cause")
+                }
+                
+            }
+        .navigationBarTitle("Algorithms")
+        }
     }
 }
 
