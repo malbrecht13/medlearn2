@@ -13,7 +13,10 @@ struct MainMenuView: View {
         NavigationView {
             List {
                 NavigationLink(destination: HyponatremiaCausesView()) {
-                    Text("Hyponatremia - determine cause")
+                    VStack(alignment: .leading) {
+                        Text("Hyponatremia: Determine Cause")
+                    }
+                    
                 }
                 
             }
