@@ -21,5 +21,6 @@ struct MyTitleModifier: ViewModifier {
         .background(RoundedRectangle(cornerRadius: 10).fill(fillColor))
         .shadow(color: Color.black, radius: 0, x: 1, y: 2)
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3).fill(Color.black))
+        .padding(.top, 30)
     }
 }
