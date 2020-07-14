@@ -60,6 +60,7 @@ struct HyponatremiaCausesView: View {
                                 
                             }
                             .modifier(SegmentedPickerModifier())
+                            .disabled(self.plasmaSelection != 0)
                             
                         }
                         VStack {
@@ -71,6 +72,7 @@ struct HyponatremiaCausesView: View {
                                 }
                             }
                             .modifier(SegmentedPickerModifier())
+                            .disabled(self.plasmaSelection != 0 || self.urineSelection == 0)
                             
                         }
                         
@@ -83,7 +85,7 @@ struct HyponatremiaCausesView: View {
                                 }
                             }
                             .modifier(SegmentedPickerModifier())
-                            
+                            .disabled(self.plasmaSelection != 0 || self.urineSelection == 0)
                         }
                         
                         
