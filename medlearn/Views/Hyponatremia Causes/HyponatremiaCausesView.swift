@@ -62,19 +62,8 @@ struct HyponatremiaCausesView: View {
                             .modifier(SegmentedPickerModifier())
                             
                         }
-                        
                         VStack {
-                            Text("Select urine sodium")
-                                .font(.headline)
-                            Picker(selection: self.$urineNaSelection, label: Text("Urine sodium")) {
-                                ForEach(0..<urineNa.count) { item in
-                                    Text(self.urineNa[item])
-                                }
-                            }
-                            .modifier(SegmentedPickerModifier())
-                        }
-                        VStack {
-                            Text("Select volume status ")
+                            Text("Select volume status")
                                 .font(.headline)
                             Picker(selection: self.$volumeSelection, label: Text("Volume status")) {
                                 ForEach(0..<volumeStatus.count) { item in
@@ -85,31 +74,53 @@ struct HyponatremiaCausesView: View {
                             
                         }
                         
+                        VStack {
+                            Text("Select urine sodium")
+                                .font(.headline)
+                            Picker(selection: self.$urineNaSelection, label: Text("Urine sodium")) {
+                                ForEach(0..<urineNa.count) { item in
+                                    Text(self.urineNa[item])
+                                }
+                            }
+                            .modifier(SegmentedPickerModifier())
+                            
+                        }
+                        
+                        
+                        
                             Button(action: {
                                 self.showingDetail.toggle()
                             }) {
                                 Text("Go!")
                             }.sheet(isPresented: $showingDetail) {
-                                if self.plasmaSelection == 0 && self.urineSelection == 0 && self.volumeSelection == 0 {
-                                    if self.urineNaSelection == 0 {
-                                        HypovolemicHyponatremiaView()
-                                    }
-                                    else {
-                                        HypovolemicHyponatremiaView2()
+                                if self.plasmaSelection == 0 {
+                                    if self.urineSelection == 0 {
+                                        LowUrineOsmView()
+                                    } else if self.urineSelection == 1 {
+                                        if self.volumeSelection == 0 {
+                                            if self.urineNaSelection == 0 {
+                                                HypovolemicHyponatremiaView()
+                                            } else {
+                                                HypovolemicHyponatremiaView2()
+                                            }
+                                        } else if self.volumeSelection == 1 {
+                                            EuvolemicHypoNaView()
+                                        } else if self.volumeSelection == 2 {
+                                                HypervolemicHypoNaView()
+
+                                        }
                                     }
                                 }
-                                
+
                             }
-
-                        
-                        
                         Spacer()
-
-                    }
+                        Text("Reference")
             }
+                
             
         }
         
+}
 }
     
 

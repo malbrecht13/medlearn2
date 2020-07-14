@@ -20,6 +20,9 @@
 		CB53C8F02481317200ED1821 /* HyponatremiaCausesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */; };
 		CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53C8F12483671200ED1821 /* MyTitleModifier.swift */; };
 		CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */; };
+		CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */; };
+		CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */; };
+		CB67E0AA24BD70E70058EF1A /* HypervolemicHypoNaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyponatremiaCausesView.swift; sourceTree = "<group>"; };
 		CB53C8F12483671200ED1821 /* MyTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTitleModifier.swift; sourceTree = "<group>"; };
 		CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicHyponatremiaView2.swift; sourceTree = "<group>"; };
+		CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowUrineOsmView.swift; sourceTree = "<group>"; };
+		CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuvolemicHypoNaView.swift; sourceTree = "<group>"; };
+		CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypervolemicHypoNaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				CB53C8DF24812F4400ED1821 /* MainMenuView.swift */,
-				CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */,
-				CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */,
-				CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */,
+				CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */,
 				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
 				CB385D17249C1F4300DB1E9C /* ViewRouter.swift */,
 				CB385D0D248839CD00DB1E9C /* ViewModifiers */,
@@ -110,6 +114,19 @@
 				CB53C8E424812F4500ED1821 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */ = {
+			isa = PBXGroup;
+			children = (
+				CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */,
+				CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */,
+				CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */,
+				CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */,
+				CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */,
+				CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */,
+			);
+			path = "Hyponatremia Causes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +207,11 @@
 				CB53C8F02481317200ED1821 /* HyponatremiaCausesView.swift in Sources */,
 				CB385D14249C093900DB1E9C /* HypovolemicHyponatremiaView.swift in Sources */,
 				CB53C8DE24812F4400ED1821 /* SceneDelegate.swift in Sources */,
+				CB67E0AA24BD70E70058EF1A /* HypervolemicHypoNaView.swift in Sources */,
+				CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */,
 				CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */,
 				CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */,
+				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
 				CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
