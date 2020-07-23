@@ -85,7 +85,7 @@ struct HyponatremiaCausesView: View {
                                 }
                             }
                             .modifier(SegmentedPickerModifier())
-                            .disabled(self.plasmaSelection != 0 || self.urineSelection == 0)
+                            .disabled(self.plasmaSelection != 0 || self.urineSelection == 0 || volumeSelection == 1)
                         }
                         
                         
@@ -94,6 +94,7 @@ struct HyponatremiaCausesView: View {
                                 self.showingDetail.toggle()
                             }) {
                                 Text("Go!")
+                                    .frame(width: 50, height: 30, alignment: .center)
                             }.sheet(isPresented: $showingDetail) {
                                 if self.plasmaSelection == 0 {
                                     if self.urineSelection == 0 {
@@ -112,11 +113,17 @@ struct HyponatremiaCausesView: View {
 
                                         }
                                     }
+                                } else if self.plasmaSelection  == 1 {
+                                    IsotonicHyponatremia()
+                                } else {
+                                    HypertonicHyponatremia()
                                 }
 
                             }
+                        
                         Spacer()
-                        Text("Reference")
+                        Spacer()
+                        
             }
                 
             

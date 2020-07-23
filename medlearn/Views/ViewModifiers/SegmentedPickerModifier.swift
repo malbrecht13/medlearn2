@@ -14,8 +14,8 @@ struct SegmentedPickerModifier: ViewModifier {
         content
         .frame(minWidth: 200, maxWidth: 350)
         .pickerStyle(SegmentedPickerStyle())
-        .background(Color.white)
         .labelsHidden()
+        .background(Color.white)
         .border(Color.black)
         .clipped()
         .shadow(color: Color.black, radius: 1, x: 2, y: 2)
