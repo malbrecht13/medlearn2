@@ -24,6 +24,7 @@
 		CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */; };
 		CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */; };
 		CB67E0AA24BD70E70058EF1A /* HypervolemicHypoNaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */; };
+		CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356BA24CE40460087A166 /* GradientButtonStyle.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowUrineOsmView.swift; sourceTree = "<group>"; };
 		CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuvolemicHypoNaView.swift; sourceTree = "<group>"; };
 		CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypervolemicHypoNaView.swift; sourceTree = "<group>"; };
+		CB7356BA24CE40460087A166 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			children = (
 				CB385D0B248839A900DB1E9C /* SegmentedPickerModifier.swift */,
 				CB53C8F12483671200ED1821 /* MyTitleModifier.swift */,
+				CB7356BA24CE40460087A166 /* GradientButtonStyle.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */,
 				CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */,
 				CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */,
+				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
 				CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */,

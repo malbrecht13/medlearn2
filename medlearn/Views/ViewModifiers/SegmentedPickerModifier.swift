@@ -12,8 +12,8 @@ import SwiftUI
 struct SegmentedPickerModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-        .frame(minWidth: 200, maxWidth: 350)
         .pickerStyle(SegmentedPickerStyle())
+        .frame(minWidth: 200, maxWidth: 350 )
         .labelsHidden()
         .background(Color.white)
         .border(Color.black)
@@ -21,3 +21,5 @@ struct SegmentedPickerModifier: ViewModifier {
         .shadow(color: Color.black, radius: 1, x: 2, y: 2)
     }
 }
+
+

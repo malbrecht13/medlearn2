@@ -14,13 +14,13 @@ struct MyTitleModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .frame(minWidth: 300).font(.headline)
+            .frame(minWidth: 300, minHeight: 15, maxHeight: 20)
+            .font(.headline)
         .foregroundColor(Color.white)
         .padding(10)
         .cornerRadius(10.0)
         .background(RoundedRectangle(cornerRadius: 10).fill(fillColor))
         .shadow(color: Color.black, radius: 0, x: 1, y: 2)
-        .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3).fill(Color.black))
         .padding(.top, 30)
     }
 }

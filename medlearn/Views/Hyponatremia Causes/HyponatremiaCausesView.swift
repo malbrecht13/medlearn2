@@ -30,7 +30,7 @@ struct HyponatremiaCausesView: View {
             ZStack {
                         Color(.gray).opacity(0.1).edgesIgnoringSafeArea(.all)
                         
-                        VStack(spacing: 50) {
+                        VStack(spacing: 40) {
                             
                             
                             Text("Hyponatremia: Determine Cause")
@@ -55,6 +55,7 @@ struct HyponatremiaCausesView: View {
                                 Picker(selection: self.$urineSelection, label: Text("Volume status")) {
                                     ForEach(0..<urineOsm.count) { item in
                                         Text(self.urineOsm[item])
+                                            
 
                                     }
                                     
@@ -119,21 +120,11 @@ struct HyponatremiaCausesView: View {
                                         HypertonicHyponatremia()
                                     }
 
-                                }
-                            
-                            Button(action: {
-                                self.showReferences.toggle()
-                            }) {
-                                HStack {
-                                    Text("References")
+                                } .buttonStyle(GradientButtonStyle())
                                     Spacer()
-                                }.sheet(isPresented: $showReferences) {
-                                    References()
-                                }
-                                .padding()
-                                
-                            }
+                                    Spacer()
                             
+                          
                             
                             
                             
@@ -144,6 +135,7 @@ struct HyponatremiaCausesView: View {
         }
         
 }
+
 
     
 
