@@ -10,7 +10,6 @@
 		CB385D0C248839A900DB1E9C /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D0B248839A900DB1E9C /* SegmentedPickerModifier.swift */; };
 		CB385D14249C093900DB1E9C /* HypovolemicHyponatremiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */; };
 		CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */; };
-		CB385D18249C1F4300DB1E9C /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D17249C1F4300DB1E9C /* ViewRouter.swift */; };
 		CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53C8DB24812F4400ED1821 /* AppDelegate.swift */; };
 		CB53C8DE24812F4400ED1821 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53C8DD24812F4400ED1821 /* SceneDelegate.swift */; };
 		CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53C8DF24812F4400ED1821 /* MainMenuView.swift */; };
@@ -33,7 +32,6 @@
 		CB385D0B248839A900DB1E9C /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicHyponatremiaView.swift; sourceTree = "<group>"; };
 		CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarExampleView.swift; sourceTree = "<group>"; };
-		CB385D17249C1F4300DB1E9C /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		CB53C8D824812F4400ED1821 /* medlearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medlearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB53C8DB24812F4400ED1821 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB53C8DD24812F4400ED1821 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,11 +76,10 @@
 		CB385D0E24883A4400DB1E9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
 				CB53C8DF24812F4400ED1821 /* MainMenuView.swift */,
 				CB5F45AB24CAE0F400D13E11 /* References.swift */,
 				CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */,
-				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
-				CB385D17249C1F4300DB1E9C /* ViewRouter.swift */,
 				CB385D0D248839CD00DB1E9C /* ViewModifiers */,
 			);
 			path = Views;
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB385D18249C1F4300DB1E9C /* ViewRouter.swift in Sources */,
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
 				CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */,
 				CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */,

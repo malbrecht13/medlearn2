@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MainMenuView: View {
+    
     var body: some View {
         NavigationView {
             List {
@@ -21,8 +22,10 @@ struct MainMenuView: View {
                 
             }
         .navigationBarTitle("Algorithms")
+        
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

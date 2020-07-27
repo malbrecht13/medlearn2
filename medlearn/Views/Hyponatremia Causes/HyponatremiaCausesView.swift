@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct HyponatremiaCausesView: View {
+    
     @State private var plasmaSelection: Int = 0
     @State private var urineSelection: Int = 0
     @State private var volumeSelection: Int = 0
@@ -121,17 +122,17 @@ struct HyponatremiaCausesView: View {
                                     }
 
                                 } .buttonStyle(GradientButtonStyle())
-                                    Spacer()
-                                    Spacer()
+                                    
+                                Spacer()
                             
-                          
+                            
                             
                             
                             
                 }
-                    
                 
             }
+            
         }
         
 }
