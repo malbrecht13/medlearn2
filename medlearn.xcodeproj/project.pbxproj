@@ -26,6 +26,8 @@
 		CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356BA24CE40460087A166 /* GradientButtonStyle.swift */; };
 		CB7356BF24D15EED0087A166 /* SheetTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356BE24D15EED0087A166 /* SheetTitle.swift */; };
 		CB7356C224D16A010087A166 /* LowUrineOsmTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C124D16A010087A166 /* LowUrineOsmTx.swift */; };
+		CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C324D234370087A166 /* ShowSheetButton.swift */; };
+		CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C524D238C50087A166 /* HypovolemicTx.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		CB7356BA24CE40460087A166 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		CB7356BE24D15EED0087A166 /* SheetTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetTitle.swift; sourceTree = "<group>"; };
 		CB7356C124D16A010087A166 /* LowUrineOsmTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowUrineOsmTx.swift; sourceTree = "<group>"; };
+		CB7356C324D234370087A166 /* ShowSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSheetButton.swift; sourceTree = "<group>"; };
+		CB7356C524D238C50087A166 /* HypovolemicTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicTx.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,7 @@
 				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
 				CB53C8DF24812F4400ED1821 /* MainMenuView.swift */,
 				CB5F45AB24CAE0F400D13E11 /* References.swift */,
+				CB7356C324D234370087A166 /* ShowSheetButton.swift */,
 				CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */,
 				CB7356C024D1699E0087A166 /* Hyponatremia treatments */,
 				CB385D0D248839CD00DB1E9C /* ViewModifiers */,
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7356C124D16A010087A166 /* LowUrineOsmTx.swift */,
+				CB7356C524D238C50087A166 /* HypovolemicTx.swift */,
 			);
 			path = "Hyponatremia treatments";
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
+				CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */,
 				CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */,
 				CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */,
 				CB385D0C248839A900DB1E9C /* SegmentedPickerModifier.swift in Sources */,
@@ -234,6 +241,7 @@
 				CB67E0AA24BD70E70058EF1A /* HypervolemicHypoNaView.swift in Sources */,
 				CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */,
 				CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */,
+				CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */,
 				CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */,
 				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,

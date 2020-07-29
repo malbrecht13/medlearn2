@@ -41,16 +41,7 @@ struct LowUrineOsmView: View {
             Spacer()
                 .frame(minHeight: 10, maxHeight: 50)
             
-            Button(action: {
-                self.showTreatments.toggle()
-            }) {
-                Text("Show treatments")
-            }.sheet(isPresented: $showTreatments) {
-                LowUrineOsmTx()
-            }.buttonStyle(GradientButtonStyle())
-                
-             
-            
+            ShowSheetButton(buttonText: "Show treatments", viewToShow: LowUrineOsmTx())
              
              Spacer()
         }

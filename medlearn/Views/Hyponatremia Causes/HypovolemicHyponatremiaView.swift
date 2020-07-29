@@ -15,21 +15,32 @@ struct HypovolemicHyponatremiaView: View {
         
         VStack {
             Group {
-                Text("Hypovolemic hyponatremia: Extrarenal loss causes")
+                Text("Hypovolemic hyponatremia: Extrarenal loss")
                     .font(.title)
                     .padding(.top, 100)
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
-                Text("urine Na < 30 meq/dL:  extrarenal loss")
-                    .font(.headline)
-                    .padding(.bottom)
-                Text("Diarrhea")
-                Text("Vomiting")
-                Text("Burn injury")
-                Text("Pancreatitis")
-                Text("Trauma")
-                    .padding(.bottom, 50)
+                    .frame(minHeight: 10, maxHeight: 20)
+                    
+                HStack {
+                    Spacer()
+                    
+                    VStack(alignment: .center, spacing: 10) {
+                        Text("Causes")
+                        .font(.headline)
+                        .padding(.bottom, 30)
+                        Text("Diarrhea")
+                        Text("Vomiting")
+                        Text("Burn injury")
+                        Text("Pancreatitis")
+                        Text("Trauma")
+                    }.padding(50)
+                    Spacer()
+                }
+                
+                ShowSheetButton(buttonText: "Show treatment", viewToShow: HypovolemicTx())
+                
             }
            
             Spacer()
