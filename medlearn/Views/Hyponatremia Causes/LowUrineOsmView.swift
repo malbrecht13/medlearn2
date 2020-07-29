@@ -9,18 +9,21 @@
 import SwiftUI
 
 struct LowUrineOsmView: View {
+    @State var showTreatments = false
+    
     var body: some View {
         VStack {
              Group {
-                 Text("Hypotonic Hyponatremia: Low Urine Osmolality")
-                     .font(.title)
-                     .padding(.top, 100)
-                     .multilineTextAlignment(.center)
-                     .padding()
+                 Text("Hypotonic Hyponatremia:")
+                    .modifier(SheetTitle())
+                    .padding(.top, 20)
+                 Text("Low Urine Osmolality")
+                    .modifier(SheetTitle())
                  Spacer()
+                    .frame(minHeight: 10, maxHeight: 50)
                  Text("Causes")
                     .font(.headline)
-                    .padding()
+                    .padding(.bottom, 30)
                 VStack (alignment: .leading) {
                     Text("Primary Polydipsia")
                         .padding(5)
@@ -28,14 +31,27 @@ struct LowUrineOsmView: View {
                         .padding(5)
                     Text("Malnutrition")
                         .padding(5)
+                    Text("Correction of hypovolemic hyponatremia with NS")
+                        .padding(5)
                 }
                     .font(.callout)
                     
              }
             
-             Spacer()
-             Text("Treatment: fluid restriction, high protein diet")
-             Text("Check literature")
+            Spacer()
+                .frame(minHeight: 10, maxHeight: 50)
+            
+            Button(action: {
+                self.showTreatments.toggle()
+            }) {
+                Text("Show treatments")
+            }.sheet(isPresented: $showTreatments) {
+                LowUrineOsmTx()
+            }.buttonStyle(GradientButtonStyle())
+                
+             
+            
+             
              Spacer()
         }
     }
