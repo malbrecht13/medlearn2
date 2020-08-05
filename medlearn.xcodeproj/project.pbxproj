@@ -28,6 +28,7 @@
 		CB7356C224D16A010087A166 /* LowUrineOsmTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C124D16A010087A166 /* LowUrineOsmTx.swift */; };
 		CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C324D234370087A166 /* ShowSheetButton.swift */; };
 		CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C524D238C50087A166 /* HypovolemicTx.swift */; };
+		CB7356CA24DB53740087A166 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C924DB53740087A166 /* DismissButton.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		CB7356C124D16A010087A166 /* LowUrineOsmTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowUrineOsmTx.swift; sourceTree = "<group>"; };
 		CB7356C324D234370087A166 /* ShowSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSheetButton.swift; sourceTree = "<group>"; };
 		CB7356C524D238C50087A166 /* HypovolemicTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicTx.swift; sourceTree = "<group>"; };
+		CB7356C924DB53740087A166 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,12 +87,8 @@
 		CB385D0E24883A4400DB1E9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
-				CB53C8DF24812F4400ED1821 /* MainMenuView.swift */,
-				CB5F45AB24CAE0F400D13E11 /* References.swift */,
-				CB7356C324D234370087A166 /* ShowSheetButton.swift */,
+				CB7356CB24DB53990087A166 /* General Views */,
 				CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */,
-				CB7356C024D1699E0087A166 /* Hyponatremia treatments */,
 				CB385D0D248839CD00DB1E9C /* ViewModifiers */,
 			);
 			path = Views;
@@ -138,13 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */,
-				CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */,
-				CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */,
-				CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */,
-				CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */,
-				CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */,
-				CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */,
-				CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */,
+				CB7356C724DB51150087A166 /* Sheets - Hyponatremia */,
 			);
 			path = "Hyponatremia Causes";
 			sourceTree = "<group>";
@@ -156,6 +148,41 @@
 				CB7356C524D238C50087A166 /* HypovolemicTx.swift */,
 			);
 			path = "Hyponatremia treatments";
+			sourceTree = "<group>";
+		};
+		CB7356C724DB51150087A166 /* Sheets - Hyponatremia */ = {
+			isa = PBXGroup;
+			children = (
+				CB7356C824DB51740087A166 /* Hyponatremia Causes */,
+				CB7356C024D1699E0087A166 /* Hyponatremia treatments */,
+			);
+			path = "Sheets - Hyponatremia";
+			sourceTree = "<group>";
+		};
+		CB7356C824DB51740087A166 /* Hyponatremia Causes */ = {
+			isa = PBXGroup;
+			children = (
+				CB67E0A524BD68590058EF1A /* LowUrineOsmView.swift */,
+				CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */,
+				CB67E09F24BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift */,
+				CB67E0A724BD6F750058EF1A /* EuvolemicHypoNaView.swift */,
+				CB67E0A924BD70E70058EF1A /* HypervolemicHypoNaView.swift */,
+				CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */,
+				CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */,
+			);
+			path = "Hyponatremia Causes";
+			sourceTree = "<group>";
+		};
+		CB7356CB24DB53990087A166 /* General Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */,
+				CB53C8DF24812F4400ED1821 /* MainMenuView.swift */,
+				CB5F45AB24CAE0F400D13E11 /* References.swift */,
+				CB7356C324D234370087A166 /* ShowSheetButton.swift */,
+				CB7356C924DB53740087A166 /* DismissButton.swift */,
+			);
+			path = "General Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7356CA24DB53740087A166 /* DismissButton.swift in Sources */,
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
 				CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */,
 				CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */,

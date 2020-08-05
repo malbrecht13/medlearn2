@@ -42,8 +42,12 @@ struct LowUrineOsmView: View {
                 .frame(minHeight: 10, maxHeight: 50)
             
             ShowSheetButton(buttonText: "Show treatments", viewToShow: LowUrineOsmTx())
+            
+            DismissButton()
+            
              
              Spacer()
+            
         }
     }
 }

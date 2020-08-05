@@ -50,44 +50,60 @@ struct HyponatremiaCausesView: View {
                                 
                             }
                             
-                            VStack {
-                                Text("Select urine osmolality")
-                                    .font(.headline)
-                                Picker(selection: self.$urineSelection, label: Text("Volume status")) {
-                                    ForEach(0..<urineOsm.count) { item in
-                                        Text(self.urineOsm[item])
-                                            
+                            //only display options below "select serum osmolality
+                            //if plasmaSelection is option 0
+                            if self.plasmaSelection == 0 {
+                                
+                            
+                                VStack {
+                                    Text("Select urine osmolality")
+                                        .font(.headline)
+                                    Picker(selection: self.$urineSelection, label: Text("Volume status")) {
+                                        ForEach(0..<urineOsm.count) { item in
+                                            Text(self.urineOsm[item])
+                                                
 
+                                        }
+                                        
                                     }
+                                    .modifier(SegmentedPickerModifier())
+                                    
                                     
                                 }
-                                .modifier(SegmentedPickerModifier())
-                                .disabled(self.plasmaSelection != 0)
                                 
-                            }
-                            VStack {
-                                Text("Select volume status")
-                                    .font(.headline)
-                                Picker(selection: self.$volumeSelection, label: Text("Volume status")) {
-                                    ForEach(0..<volumeStatus.count) { item in
-                                        Text(self.volumeStatus[item])
+                                //only display these VStacks if urineOsmolality is
+                                //greater than 100
+                                if urineSelection == 1 {
+                                    VStack {
+                                        Text("Select volume status")
+                                            .font(.headline)
+                                        Picker(selection: self.$volumeSelection, label: Text("Volume status")) {
+                                            ForEach(0..<volumeStatus.count) { item in
+                                                Text(self.volumeStatus[item])
+                                            }
+                                        }
+                                        .modifier(SegmentedPickerModifier())
+                                        
+                                        
+                                    }
+                                    
+                                    //only display this VStack if not Euvolemic
+                                    //hyponatremia
+                                    if volumeSelection != 1 {
+                                        VStack {
+                                            Text("Select urine sodium")
+                                                .font(.headline)
+                                            Picker(selection: self.$urineNaSelection, label: Text("Urine sodium")) {
+                                                ForEach(0..<urineNa.count) { item in
+                                                    Text(self.urineNa[item])
+                                                }
+                                            }
+                                            .modifier(SegmentedPickerModifier())
+                                            
+                                        }
                                     }
                                 }
-                                .modifier(SegmentedPickerModifier())
-                                .disabled(self.plasmaSelection != 0 || self.urineSelection == 0)
                                 
-                            }
-                            
-                            VStack {
-                                Text("Select urine sodium")
-                                    .font(.headline)
-                                Picker(selection: self.$urineNaSelection, label: Text("Urine sodium")) {
-                                    ForEach(0..<urineNa.count) { item in
-                                        Text(self.urineNa[item])
-                                    }
-                                }
-                                .modifier(SegmentedPickerModifier())
-                                .disabled(self.plasmaSelection != 0 || self.urineSelection == 0 || volumeSelection == 1)
                             }
                             
                             
