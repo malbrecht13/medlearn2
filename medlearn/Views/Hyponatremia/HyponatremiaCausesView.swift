@@ -33,14 +33,12 @@ struct HyponatremiaCausesView: View {
         ZStack {
             Color(.gray).opacity(0.1).edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 40) {
+            VStack(spacing: 30) {
                 
                 Text("Hyponatremia: Determine Cause")
                     .modifier(MyTitleModifier(fillColor: fillColor))
                 
-                Text("Instructions:  You may need plasma osmolality, urine osmolality, urine sodium, and patient's volume status for this.  Different options will appear depending on your selections below. The Go! button is pressable at any time and will present a different set of causes depending on your selections.")
-                    .font(.footnote)
-                    .padding(.horizontal, 20)
+                
                 
                 ShowPicker(parentBinding: $plasmaSelection, text: "Select plasma osmolality", parentArray: plasmaOsm)
                 
@@ -114,26 +112,26 @@ struct HyponatremiaCausesView: View {
 }
 
 
-struct ShowPicker: View {
-    
-    @Binding var parentBinding: Int
-    let text: String
-    let parentArray: [String]
-    
-    var body: some View {
-        VStack {
-            Text(text)
-                .font(.headline)
-            Picker(selection: $parentBinding, label: Text(text)) {
-                ForEach(0..<parentArray.count) { item in
-                    Text(self.parentArray[item])
-                }
-                
-            }
-            .modifier(SegmentedPickerModifier())
-        }
-    }
-}
+//struct ShowPicker: View {
+//    
+//    @Binding var parentBinding: Int
+//    let text: String
+//    let parentArray: [String]
+//    
+//    var body: some View {
+//        VStack {
+//            Text(text)
+//                .font(.headline)
+//            Picker(selection: $parentBinding, label: Text(text)) {
+//                ForEach(0..<parentArray.count) { item in
+//                    Text(self.parentArray[item])
+//                }
+//                
+//            }
+//            .modifier(SegmentedPickerModifier())
+//        }
+//    }
+//}
 
 
 

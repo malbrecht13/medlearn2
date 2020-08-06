@@ -15,9 +15,13 @@ struct MainMenuView: View {
             List {
                 NavigationLink(destination: HyponatremiaCausesView()) {
                     VStack(alignment: .leading) {
-                        Text("Hyponatremia: Determine Cause")
+                        Text("Hyponatremia")
                     }
-                    
+                }
+                NavigationLink(destination: CAPMain()) {
+                    VStack(alignment: .leading) {
+                        Text("Community Acquired Pneumonia")
+                    }
                 }
                 
             }

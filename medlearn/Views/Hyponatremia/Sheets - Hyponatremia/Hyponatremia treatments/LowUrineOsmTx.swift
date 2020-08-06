@@ -26,7 +26,7 @@ struct LowUrineOsmTx: View {
                    Text("Chronic (>48h onset or unknown duration):")
                        .font(.footnote)
                        .fontWeight(.bold)
-                   Text("Consult nephrology. If encephalopathic, correction with 3% NaCl as in acute treatment below.  Otherwise use fluid restriction, high protein diet.  Raise serum sodium no more than 8 mEq per 24 hour period. Higher risk of neurologic complications with rapid correction: alcoholism, malnourishment, hypokalemia, serum Na < 105, cirrhosis. Check Na q4 hours.")
+                   Text("Consult nephrology. If encephalopathic, correction with 3% NaCl as in acute treatment below.  Otherwise use fluid restriction, high protein diet.  Raise serum sodium no more than 8 mEq per 24 hour period. Risk factors for neurologic complications with rapid correction: alcoholism, malnourishment, hypokalemia, serum Na < 105, cirrhosis. Check Na q4 hours.")
                        .padding()
                        .padding(.bottom, 20)
                        .minimumScaleFactor(0.5)

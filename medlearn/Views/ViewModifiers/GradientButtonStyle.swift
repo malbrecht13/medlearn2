@@ -10,12 +10,14 @@ import Foundation
 import SwiftUI
 
 struct GradientButtonStyle: ButtonStyle {
+    
+    var fillColor = Color.blue
  
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(minWidth: 100, minHeight: 10, maxHeight: 10)
             .padding(10)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue))
+            .background(RoundedRectangle(cornerRadius: 10).fill(fillColor))
             .cornerRadius(10)
             .padding(.horizontal, 20)
             .foregroundColor(.white)

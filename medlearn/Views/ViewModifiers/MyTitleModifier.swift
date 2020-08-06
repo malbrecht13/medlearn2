@@ -12,15 +12,17 @@ import SwiftUI
 struct MyTitleModifier: ViewModifier {
     var fillColor = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)
     
+    var foregroundColor = Color.white
+    
     func body(content: Content) -> some View {
         content
             .frame(minWidth: 300, minHeight: 15, maxHeight: 20)
             .font(.headline)
-        .foregroundColor(Color.white)
+        .foregroundColor(foregroundColor)
         .padding(10)
         .cornerRadius(10.0)
         .background(RoundedRectangle(cornerRadius: 10).fill(fillColor))
         .shadow(color: Color.black, radius: 0, x: 1, y: 2)
-        .padding(.top, 30)
+        .padding(.top, 10)
     }
 }

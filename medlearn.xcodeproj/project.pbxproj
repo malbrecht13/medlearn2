@@ -29,6 +29,10 @@
 		CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C324D234370087A166 /* ShowSheetButton.swift */; };
 		CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C524D238C50087A166 /* HypovolemicTx.swift */; };
 		CB7356CA24DB53740087A166 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356C924DB53740087A166 /* DismissButton.swift */; };
+		CB7356CE24DBB7980087A166 /* CAPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356CD24DBB7980087A166 /* CAPMain.swift */; };
+		CB7356D024DBBDB10087A166 /* ShowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356CF24DBBDB10087A166 /* ShowPicker.swift */; };
+		CB7356D224DBD2600087A166 /* InpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D124DBD2600087A166 /* InpatientCAP.swift */; };
+		CB7356D424DBD2C70087A166 /* OutpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +62,10 @@
 		CB7356C324D234370087A166 /* ShowSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSheetButton.swift; sourceTree = "<group>"; };
 		CB7356C524D238C50087A166 /* HypovolemicTx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicTx.swift; sourceTree = "<group>"; };
 		CB7356C924DB53740087A166 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
+		CB7356CD24DBB7980087A166 /* CAPMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPMain.swift; sourceTree = "<group>"; };
+		CB7356CF24DBBDB10087A166 /* ShowPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPicker.swift; sourceTree = "<group>"; };
+		CB7356D124DBD2600087A166 /* InpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpatientCAP.swift; sourceTree = "<group>"; };
+		CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutpatientCAP.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				CB7356CB24DB53990087A166 /* General Views */,
-				CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */,
+				CB7356CC24DBB73C0087A166 /* Community Acquired Pneumonia */,
+				CB67E0AB24BD74440058EF1A /* Hyponatremia */,
 				CB385D0D248839CD00DB1E9C /* ViewModifiers */,
 			);
 			path = Views;
@@ -132,13 +141,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CB67E0AB24BD74440058EF1A /* Hyponatremia Causes */ = {
+		CB67E0AB24BD74440058EF1A /* Hyponatremia */ = {
 			isa = PBXGroup;
 			children = (
 				CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */,
 				CB7356C724DB51150087A166 /* Sheets - Hyponatremia */,
 			);
-			path = "Hyponatremia Causes";
+			path = Hyponatremia;
 			sourceTree = "<group>";
 		};
 		CB7356C024D1699E0087A166 /* Hyponatremia treatments */ = {
@@ -181,8 +190,19 @@
 				CB5F45AB24CAE0F400D13E11 /* References.swift */,
 				CB7356C324D234370087A166 /* ShowSheetButton.swift */,
 				CB7356C924DB53740087A166 /* DismissButton.swift */,
+				CB7356CF24DBBDB10087A166 /* ShowPicker.swift */,
 			);
 			path = "General Views";
+			sourceTree = "<group>";
+		};
+		CB7356CC24DBB73C0087A166 /* Community Acquired Pneumonia */ = {
+			isa = PBXGroup;
+			children = (
+				CB7356CD24DBB7980087A166 /* CAPMain.swift */,
+				CB7356D124DBD2600087A166 /* InpatientCAP.swift */,
+				CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */,
+			);
+			path = "Community Acquired Pneumonia";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,11 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7356D424DBD2C70087A166 /* OutpatientCAP.swift in Sources */,
 				CB7356CA24DB53740087A166 /* DismissButton.swift in Sources */,
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
 				CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */,
 				CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */,
 				CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */,
+				CB7356D224DBD2600087A166 /* InpatientCAP.swift in Sources */,
 				CB385D0C248839A900DB1E9C /* SegmentedPickerModifier.swift in Sources */,
 				CB53C8F02481317200ED1821 /* HyponatremiaCausesView.swift in Sources */,
 				CB385D14249C093900DB1E9C /* HypovolemicHyponatremiaView.swift in Sources */,
@@ -269,8 +291,10 @@
 				CB67E0AA24BD70E70058EF1A /* HypervolemicHypoNaView.swift in Sources */,
 				CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */,
 				CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */,
+				CB7356D024DBBDB10087A166 /* ShowPicker.swift in Sources */,
 				CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */,
 				CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */,
+				CB7356CE24DBB7980087A166 /* CAPMain.swift in Sources */,
 				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
