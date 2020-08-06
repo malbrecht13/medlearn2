@@ -10,7 +10,19 @@ import SwiftUI
 
 struct InpatientCAP: View {
     var body: some View {
-        Text("Inpatient")
+        VStack {
+            Text("Determine whether severe vs. non-severe CAP")
+                .font(.title)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5)
+                .padding()
+            VStack {
+                HStack {
+                    Text("")
+                }
+            }
+        }
+        
     }
 }
 
