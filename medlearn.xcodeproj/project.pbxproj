@@ -33,6 +33,7 @@
 		CB7356D024DBBDB10087A166 /* ShowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356CF24DBBDB10087A166 /* ShowPicker.swift */; };
 		CB7356D224DBD2600087A166 /* InpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D124DBD2600087A166 /* InpatientCAP.swift */; };
 		CB7356D424DBD2C70087A166 /* OutpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */; };
+		CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D524DD04D00087A166 /* ShowToggle.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		CB7356CF24DBBDB10087A166 /* ShowPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPicker.swift; sourceTree = "<group>"; };
 		CB7356D124DBD2600087A166 /* InpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpatientCAP.swift; sourceTree = "<group>"; };
 		CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutpatientCAP.swift; sourceTree = "<group>"; };
+		CB7356D524DD04D00087A166 /* ShowToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToggle.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				CB7356C324D234370087A166 /* ShowSheetButton.swift */,
 				CB7356C924DB53740087A166 /* DismissButton.swift */,
 				CB7356CF24DBBDB10087A166 /* ShowPicker.swift */,
+				CB7356D524DD04D00087A166 /* ShowToggle.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
+				CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */,
 				CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */,
 				CB7356C224D16A010087A166 /* LowUrineOsmTx.swift in Sources */,
 				CB7356BF24D15EED0087A166 /* SheetTitle.swift in Sources */,

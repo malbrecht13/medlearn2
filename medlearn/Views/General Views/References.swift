@@ -11,13 +11,11 @@ import SwiftUI
 
 struct Citation: Identifiable {
     let id = UUID()
-    var title: String
     var first: String
     var italicized: String
     var last: String
     
-    init(title: String, first: String, italicized: String, last: String) {
-        self.title = title
+    init(first: String, italicized: String, last: String) {
         self.first = first
         self.italicized = italicized
         self.last = last
@@ -25,10 +23,10 @@ struct Citation: Identifiable {
 }
 
 let citations : [Citation] =  [
-    Citation(title: "Hyponatremia", first: "Buffington, MA & Abreo, K.  Hyponatremia: A review. ", italicized: "Journal of Intensive Care Medicine.", last: " 2016;31(4):223- 236."),
-    Citation(title: "Community-acquired pneumonia", first: "Metlay et al. Diagnosis and treatment of adults with community-acquired pneumonia. ", italicized: "Am J Respir Crit Care Med.", last: "2019;200(7):e45-e67.")]
+    Citation(first: "Topic: Hyponatremia. Buffington, MA & Abreo, K.  Hyponatremia: A review. ", italicized: "Journal of Intensive Care Medicine.", last: " 2016;31(4):223- 236."),
+    Citation(first: "Topic: Community-acquired pneumonia. Metlay et al. Diagnosis and treatment of adults with community-acquired pneumonia. ", italicized: "Am J Respir Crit Care Med.", last: "2019;200(7):e45-e67.")]
 
-let mapped = citations.sorted { $0.title < $1.title }
+let mapped = citations.sorted { $0.first < $1.first }
 
 struct References: View {
 
@@ -39,15 +37,12 @@ struct References: View {
                 .font(.largeTitle)
                 .fontWeight(.medium)
             VStack {
-                // title 0
                 ForEach(mapped.indices) { i in
-                    Text(mapped[i].title)
-                        .fontWeight(.medium)
-                        .padding(25)
                     Text(mapped[i].first)
                     + Text(mapped[i].italicized).italic()
                     + Text(mapped[i].last)
-                }
+                }.padding()
+
             }
             .padding()
             
