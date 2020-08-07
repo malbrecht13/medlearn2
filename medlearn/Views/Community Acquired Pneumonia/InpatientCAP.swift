@@ -36,21 +36,27 @@ struct InpatientCAP: View {
                 .minimumScaleFactor(0.5)
                 .padding()
             Form {
-                Section(header: Text("IDSA/ATS Minor criteria: \(minorCount)")) {
-                    ShowToggle(binding: $rrElevated, count: $minorCount, text: "Resp rate ≥ 30")
-                    ShowToggle(binding: $pfElevated, count: $minorCount, text: "PaO2/FiO2 ratio ≤ 250")
-                    ShowToggle(binding: $infiltrates, count: $minorCount, text: "Multilobar infiltrates")
-                    ShowToggle(binding: $confusion, count: $minorCount, text: "Confusion/disorientation")
-                    ShowToggle(binding: $uremia, count: $minorCount, text: "Uremia (BUN ≥ 20)")
-                    ShowToggle(binding: $leukopenia, count: $minorCount, text: "Leukopenia (WBC < 4,000 cells/µl)")
-                    ShowToggle(binding: $thrombocytopenia, count: $minorCount, text: "Thrombocytopenia (platelets < 100,000 µl)").lineLimit(1).minimumScaleFactor(0.5)
-                    ShowToggle(binding: $hypothermia, count: $minorCount, text: "Hypothermia (temp < 36℃)")
-                    ShowToggle(binding: $hypotension, count: $minorCount, text: "Hypotension requiring aggressive fluids")
-                }
                 Section(header: Text("IDSA/ATS Major criteria: \(majorCount)")) {
                     ShowToggle(binding: $shock, count: $majorCount, text: "Septic shock requiring vasopressors")
                     ShowToggle(binding: $mv, count: $majorCount, text: "Respiratory failure requiring mechanical ventilation")
                 }
+                if majorCount == 0 {
+                    Section(header: Text("IDSA/ATS Minor criteria: \(minorCount)")) {
+                        ShowToggle(binding: $rrElevated, count: $minorCount, text: "Resp rate ≥ 30")
+                        ShowToggle(binding: $pfElevated, count: $minorCount, text: "PaO2/FiO2 ratio ≤ 250")
+                        ShowToggle(binding: $infiltrates, count: $minorCount, text: "Multilobar infiltrates")
+                        ShowToggle(binding: $confusion, count: $minorCount, text: "Confusion/disorientation")
+                        ShowToggle(binding: $uremia, count: $minorCount, text: "Uremia (BUN ≥ 20)")
+                        ShowToggle(binding: $leukopenia, count: $minorCount, text: "Leukopenia (WBC < 4,000 cells/µl)")
+                        ShowToggle(binding: $thrombocytopenia, count: $minorCount, text: "Thrombocytopenia (platelets < 100,000 µl)").lineLimit(1).minimumScaleFactor(0.5)
+                        ShowToggle(binding: $hypothermia, count: $minorCount, text: "Hypothermia (temp < 36℃)")
+                        ShowToggle(binding: $hypotension, count: $minorCount, text: "Hypotension requiring aggressive fluids")
+                    }
+                    
+                }
+                Text("Note: Definition of severe CAP is one major criterion or three or more minor criteria")
+                
+                
             }
             Button(action: {
                 self.showNext.toggle()
