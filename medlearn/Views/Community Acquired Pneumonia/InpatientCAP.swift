@@ -10,24 +10,11 @@ import SwiftUI
 
 struct InpatientCAP: View {
     
-    @State private var rrElevated = false
-    @State private var pfElevated = false
-    @State private var infiltrates = false
-    @State private var confusion = false
-    @State private var uremia = false
-    @State private var leukopenia = false
-    @State private var thrombocytopenia = false
-    @State private var hypothermia = false
-    @State private var hypotension = false
-    @State private var shock = false
-    @State private var mv = false
-    @State private var minorCount = 0
-    @State private var majorCount = 0
+    @ObservedObject var capToggle : CAPToggle = CAPToggle()
+    
     @State private var showNext = false
     
-    
-    
-    
+
     var body: some View {
         VStack {
             Text("Determine whether severe vs. non-severe CAP")
@@ -35,22 +22,25 @@ struct InpatientCAP: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
                 .padding()
+            Text("Select all that apply")
+                .font(.subheadline)
             Form {
-                Section(header: Text("IDSA/ATS Major criteria: \(majorCount)")) {
-                    ShowToggle(binding: $shock, count: $majorCount, text: "Septic shock requiring vasopressors")
-                    ShowToggle(binding: $mv, count: $majorCount, text: "Respiratory failure requiring mechanical ventilation")
+                Section(header: Text("IDSA/ATS Major criteria: \(capToggle.majorCount)")) {
+                    ShowToggle(binding: $capToggle.shock, count: $capToggle.majorCount, text: "Septic shock requiring vasopressors")
+                    ShowToggle(binding: $capToggle.mv, count: $capToggle.majorCount, text: "Respiratory failure requiring mechanical ventilation")
                 }
-                if majorCount == 0 {
-                    Section(header: Text("IDSA/ATS Minor criteria: \(minorCount)")) {
-                        ShowToggle(binding: $rrElevated, count: $minorCount, text: "Resp rate ≥ 30")
-                        ShowToggle(binding: $pfElevated, count: $minorCount, text: "PaO2/FiO2 ratio ≤ 250")
-                        ShowToggle(binding: $infiltrates, count: $minorCount, text: "Multilobar infiltrates")
-                        ShowToggle(binding: $confusion, count: $minorCount, text: "Confusion/disorientation")
-                        ShowToggle(binding: $uremia, count: $minorCount, text: "Uremia (BUN ≥ 20)")
-                        ShowToggle(binding: $leukopenia, count: $minorCount, text: "Leukopenia (WBC < 4,000 cells/µl)")
-                        ShowToggle(binding: $thrombocytopenia, count: $minorCount, text: "Thrombocytopenia (platelets < 100,000 µl)").lineLimit(1).minimumScaleFactor(0.5)
-                        ShowToggle(binding: $hypothermia, count: $minorCount, text: "Hypothermia (temp < 36℃)")
-                        ShowToggle(binding: $hypotension, count: $minorCount, text: "Hypotension requiring aggressive fluids")
+                if capToggle.majorCount == 0 {
+                    Section(header: Text("IDSA/ATS Minor criteria: \(capToggle.minorCount)")) {
+                        
+                        ShowToggle(binding: $capToggle.rrElevated, count: $capToggle.minorCount, text: "Resp rate ≥ 30")
+                        ShowToggle(binding: $capToggle.pfElevated, count: $capToggle.minorCount, text: "PaO2/FiO2 ratio ≤ 250")
+                        ShowToggle(binding: $capToggle.infiltrates, count: $capToggle.minorCount, text: "Multilobar infiltrates")
+                        ShowToggle(binding: $capToggle.confusion, count: $capToggle.minorCount, text: "Confusion/disorientation")
+                        ShowToggle(binding: $capToggle.uremia, count: $capToggle.minorCount, text: "Uremia (BUN ≥ 20)")
+                        ShowToggle(binding: $capToggle.leukopenia, count: $capToggle.minorCount, text: "Leukopenia (WBC < 4,000 cells/µl)")
+                        ShowToggle(binding: $capToggle.thrombocytopenia, count: $capToggle.minorCount, text: "Thrombocytopenia (platelets < 100,000 µl)").lineLimit(1).minimumScaleFactor(0.5)
+                        ShowToggle(binding: $capToggle.hypothermia, count: $capToggle.minorCount, text: "Hypothermia (temp < 36℃)")
+                        ShowToggle(binding: $capToggle.hypotension, count: $capToggle.minorCount, text: "Hypotension requiring aggressive fluids")
                     }
                     
                 }
@@ -58,11 +48,15 @@ struct InpatientCAP: View {
                 
                 
             }
+            NavigationLink(destination: Isolates(capToggle: capToggle), isActive: $showNext) {
+                EmptyView()
+            }
             Button(action: {
                 self.showNext.toggle()
             }) {
                 Text("Next")
             }.buttonStyle(GradientButtonStyle(fillColor: Color.pink))
+            .padding()
         }
     }
 }

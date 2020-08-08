@@ -34,6 +34,9 @@
 		CB7356D224DBD2600087A166 /* InpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D124DBD2600087A166 /* InpatientCAP.swift */; };
 		CB7356D424DBD2C70087A166 /* OutpatientCAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */; };
 		CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D524DD04D00087A166 /* ShowToggle.swift */; };
+		CB7356D924DDF90A0087A166 /* CAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D824DDF90A0087A166 /* CAPManagement.swift */; };
+		CB7356DB24DDFC270087A166 /* Isolates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356DA24DDFC270087A166 /* Isolates.swift */; };
+		CB7356DD24DE143A0087A166 /* CAPToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356DC24DE143A0087A166 /* CAPToggle.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +71,9 @@
 		CB7356D124DBD2600087A166 /* InpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InpatientCAP.swift; sourceTree = "<group>"; };
 		CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutpatientCAP.swift; sourceTree = "<group>"; };
 		CB7356D524DD04D00087A166 /* ShowToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowToggle.swift; sourceTree = "<group>"; };
+		CB7356D824DDF90A0087A166 /* CAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPManagement.swift; sourceTree = "<group>"; };
+		CB7356DA24DDFC270087A166 /* Isolates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Isolates.swift; sourceTree = "<group>"; };
+		CB7356DC24DE143A0087A166 /* CAPToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPToggle.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +209,10 @@
 			children = (
 				CB7356CD24DBB7980087A166 /* CAPMain.swift */,
 				CB7356D124DBD2600087A166 /* InpatientCAP.swift */,
+				CB7356DA24DDFC270087A166 /* Isolates.swift */,
+				CB7356D824DDF90A0087A166 /* CAPManagement.swift */,
 				CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */,
+				CB7356DC24DE143A0087A166 /* CAPToggle.swift */,
 			);
 			path = "Community Acquired Pneumonia";
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7356D424DBD2C70087A166 /* OutpatientCAP.swift in Sources */,
+				CB7356DB24DDFC270087A166 /* Isolates.swift in Sources */,
 				CB7356CA24DB53740087A166 /* DismissButton.swift in Sources */,
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
 				CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */,
@@ -295,6 +305,7 @@
 				CB67E0A824BD6F750058EF1A /* EuvolemicHypoNaView.swift in Sources */,
 				CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */,
 				CB7356D024DBBDB10087A166 /* ShowPicker.swift in Sources */,
+				CB7356D924DDF90A0087A166 /* CAPManagement.swift in Sources */,
 				CB7356C424D234370087A166 /* ShowSheetButton.swift in Sources */,
 				CB53C8E024812F4400ED1821 /* MainMenuView.swift in Sources */,
 				CB7356CE24DBB7980087A166 /* CAPMain.swift in Sources */,
@@ -302,6 +313,7 @@
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
 				CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */,
+				CB7356DD24DE143A0087A166 /* CAPToggle.swift in Sources */,
 				CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */,
 				CB7356C224D16A010087A166 /* LowUrineOsmTx.swift in Sources */,
 				CB7356BF24D15EED0087A166 /* SheetTitle.swift in Sources */,
