@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MainMenuView: View {
+
     
     var body: some View {
         NavigationView {

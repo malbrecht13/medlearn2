@@ -20,14 +20,14 @@ struct HyponatremiaCausesView: View {
     
     @State private var half = false
     
-    let plasmaOsm = ["<275 mOsm/L", "275-295 mOsm/L", ">295 mOsm/L"]
-    let urineOsm = ["<100 mOsm/L", ">100 mOsm/L"]
-    let urineNa = ["<30 mEq/L", ">30 mEq/L"]
-    let volumeStatus = ["Hypovolemic", "Euvolemic", "Hypervolemic"]
+    private let plasmaOsm = ["<275 mOsm/L", "Normal", ">295 mOsm/L"]
+    private let urineOsm = ["<100 mOsm/L", ">100 mOsm/L"]
+    private let urineNa = ["<30 mEq/L", ">30 mEq/L"]
+    private let volumeStatus = ["Hypovolemic", "Euvolemic", "Hypervolemic"]
     
     
-    let fillColor = Color.blue
-    let lineWidth: CGFloat = 3
+    private let fillColor = Color.blue
+    private let lineWidth: CGFloat = 3
     
     var body: some View {
         ZStack {
@@ -35,41 +35,41 @@ struct HyponatremiaCausesView: View {
             
             VStack(spacing: 30) {
                 
-                Text("Hyponatremia: Determine Cause")
+                Text("Hyponatremia")
                     .modifier(MyTitleModifier(fillColor: fillColor))
+                
+                Text("Select any that apply.  However, some of the buttons below are disabled if not needed for the cause determination.  Press the 'Next' button at any time.")
+                    .font(.caption)
+                    .padding()
                 
                 
                 
                 ShowPicker(parentBinding: $plasmaSelection, text: "Select plasma osmolality", parentArray: plasmaOsm)
                 
-                //only display options below "select serum osmolality
+                //only enable options below "select serum osmolality
                 //if plasmaSelection is option 0
+                ShowPicker(parentBinding: $urineSelection, text: "Select urine Osmolality", parentArray: urineOsm)
+                    .disabled(plasmaSelection != 0)
                 
-                if self.plasmaSelection == 0 {
+                //only enable these Picker options if urineOsmolality is
+                //greater than 100
+                ShowPicker(parentBinding: $volumeSelection, text: "Select volume status", parentArray: volumeStatus)
+                    .disabled(urineSelection == 0)
+                //only enable if not Euvolemic
+                //hyponatremia
+                
+                ShowPicker(parentBinding: $urineNaSelection, text: "Select urine sodium", parentArray: urineNa)
+                    .disabled(urineSelection == 0 || volumeSelection == 1)
+                   
                     
-                    ShowPicker(parentBinding: $urineSelection, text: "Select urine Osmolality", parentArray: urineOsm)
-                    
-                    //only display these Picker options if urineOsmolality is
-                    //greater than 100
-                    if urineSelection == 1 {
-                        
-                        ShowPicker(parentBinding: $volumeSelection, text: "Select volume status", parentArray: volumeStatus)
-                        
-                        //only display this VStack if not Euvolemic
-                        //hyponatremia
-                        if volumeSelection != 1 {
-                            ShowPicker(parentBinding: $urineNaSelection, text: "Select urine sodium", parentArray: urineNa)
-                        }
-                    }
-                    
-                }
+                
                 
                 
                 
                 Button(action: {
                     self.showingDetail.toggle()
                 }) {
-                    Text("Go!")
+                    Text("Next")
                         .frame(width: 50, height: 30, alignment: .center)
                 }.sheet(isPresented: $showingDetail) {
                     if self.plasmaSelection == 0 {
@@ -104,34 +104,12 @@ struct HyponatremiaCausesView: View {
                 
                 
             }
-            
+            }
         }
-        
-    }
-        
 }
 
 
-//struct ShowPicker: View {
-//    
-//    @Binding var parentBinding: Int
-//    let text: String
-//    let parentArray: [String]
-//    
-//    var body: some View {
-//        VStack {
-//            Text(text)
-//                .font(.headline)
-//            Picker(selection: $parentBinding, label: Text(text)) {
-//                ForEach(0..<parentArray.count) { item in
-//                    Text(self.parentArray[item])
-//                }
-//                
-//            }
-//            .modifier(SegmentedPickerModifier())
-//        }
-//    }
-//}
+
 
 
 
@@ -140,3 +118,4 @@ struct HyponatremiaView_Previews: PreviewProvider {
         HyponatremiaCausesView()
     }
 }
+

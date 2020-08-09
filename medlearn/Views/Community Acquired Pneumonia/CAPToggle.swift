@@ -14,7 +14,7 @@ import SwiftUI
 
 class CAPToggle: ObservableObject {
     
-    //variables from InpatientCAP.swift
+    //variables for InpatientCAP.swift
     @Published var rrElevated = false
     @Published var pfElevated = false
     @Published var infiltrates = false
@@ -29,10 +29,14 @@ class CAPToggle: ObservableObject {
     @Published var minorCount = 0
     @Published var majorCount = 0
     
-    //variables from Isolates.swift
+    //variables for Isolates.swift
     @Published var insignificantCount = 0
     @Published var influenza = false
     @Published var mrsa = false
     @Published var pseudomonas = false
     @Published var hospitalization = false
+    
+    //variables for OutpatientCAP.swift
+    @Published var nextView = false
+    @Published var selection = 0
 }

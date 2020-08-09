@@ -21,6 +21,7 @@ struct InpatientCAP: View {
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.5)
+                .padding(.top, -30)
                 .padding()
             Text("Select all that apply")
                 .font(.subheadline)

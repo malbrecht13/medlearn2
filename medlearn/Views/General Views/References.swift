@@ -9,13 +9,14 @@
 import SwiftUI
 
 
-struct Citation: Identifiable {
-    let id = UUID()
+struct Citation {
+    let topic: String
     var first: String
     var italicized: String
     var last: String
     
-    init(first: String, italicized: String, last: String) {
+    init(topic: String, first: String, italicized: String, last: String) {
+        self.topic = topic
         self.first = first
         self.italicized = italicized
         self.last = last
@@ -23,34 +24,36 @@ struct Citation: Identifiable {
 }
 
 let citations : [Citation] =  [
-    Citation(first: "Topic: Hyponatremia. Buffington, MA & Abreo, K.  Hyponatremia: A review. ", italicized: "Journal of Intensive Care Medicine.", last: " 2016;31(4):223- 236."),
-    Citation(first: "Topic: Community-acquired pneumonia. Metlay et al. Diagnosis and treatment of adults with community-acquired pneumonia. ", italicized: "Am J Respir Crit Care Med.", last: "2019;200(7):e45-e67.")]
+    Citation(topic: "Hyponatremia", first: "Buffington, MA & Abreo, K.  Hyponatremia: A review. ", italicized: "Journal of Intensive Care Medicine.", last: " 2016;31(4):223- 236."),
+    Citation(topic: "Community-acquired pneumonia", first:  "Metlay et al. Diagnosis and treatment of adults with community-acquired pneumonia. ", italicized: "Am J Respir Crit Care Med. ", last: "2019;200(7):e45-e67.")]
 
-let mapped = citations.sorted { $0.first < $1.first }
+let sortedCitations = citations.sorted { $0.topic < $1.topic }
+
 
 struct References: View {
 
     var body: some View {
-        ScrollView {
-            
+        VStack {
             Text("References")
-                .font(.largeTitle)
-                .fontWeight(.medium)
-            VStack {
-                ForEach(mapped.indices) { i in
-                    Text(mapped[i].first)
-                    + Text(mapped[i].italicized).italic()
-                    + Text(mapped[i].last)
-                }.padding()
-
+                .modifier(MyTitleModifier())
+            Form {
+                Section(header: Text("\(sortedCitations[0].topic)")) {
+                    Group {
+                        Text("\(sortedCitations[0].first)")
+                            + Text("\(sortedCitations[0].italicized)").italic()
+                        + Text("\(sortedCitations[0].last)")
+                    }.font(.caption)
+                    
+                }
+                Section(header: Text("\(sortedCitations[1].topic)")) {
+                    Group {
+                        Text("\(sortedCitations[1].first)")
+                            + Text("\(sortedCitations[1].italicized)").italic()
+                        + Text("\(sortedCitations[1].last)")
+                    }.font(.caption)
+                }
             }
-            .padding()
-            
-            
-            Spacer()
         }
-    .padding()
-        .font(.footnote)
 
     }
 }

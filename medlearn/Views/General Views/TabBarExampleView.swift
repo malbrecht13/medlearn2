@@ -10,37 +10,33 @@ import SwiftUI
 
 struct TabBarExampleView: View {
     
-    var body: some View {
-        
-        TabView {
-            VStack {
-                MainMenuView()
-            }
-            .tabItem({ TabLabel(imageName: "waveform.path.ecg", label: "Medical algorithms")})
-            
-           
-            VStack {
-                
-                References()
-            }
-            .tabItem({ TabLabel(imageName: "book.circle", label: "References")})
-            
-        }
-    }
-}
-
-struct TabLabel: View {
-    let imageName: String
-    let label: String
     
     var body: some View {
+        
+        TabView{
+            
+            MainMenuView()
+               
+                .tabItem {
+                    Image(systemName: "waveform.path.ecg")
+                    Text("Medical algorithms")
+                    }
 
-        HStack {
-            Image(systemName: imageName)
-            Text(label)
+                
+            
+            References()
+                .tabItem {
+                    Image(systemName: "book.circle")
+                    Text("References")
+                }
+
         }
+       
     }
 }
+
+
+
 
 
 

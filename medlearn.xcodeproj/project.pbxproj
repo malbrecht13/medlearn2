@@ -37,6 +37,7 @@
 		CB7356D924DDF90A0087A166 /* CAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356D824DDF90A0087A166 /* CAPManagement.swift */; };
 		CB7356DB24DDFC270087A166 /* Isolates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356DA24DDFC270087A166 /* Isolates.swift */; };
 		CB7356DD24DE143A0087A166 /* CAPToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356DC24DE143A0087A166 /* CAPToggle.swift */; };
+		CB7356EC24DFAC430087A166 /* OutCAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7356EB24DFAC430087A166 /* OutCAPManagement.swift */; };
 		CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */; };
 		CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		CB7356D824DDF90A0087A166 /* CAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPManagement.swift; sourceTree = "<group>"; };
 		CB7356DA24DDFC270087A166 /* Isolates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Isolates.swift; sourceTree = "<group>"; };
 		CB7356DC24DE143A0087A166 /* CAPToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPToggle.swift; sourceTree = "<group>"; };
+		CB7356EB24DFAC430087A166 /* OutCAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCAPManagement.swift; sourceTree = "<group>"; };
 		CBA4F71E24C99019004861B4 /* IsotonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsotonicHyponatremia.swift; sourceTree = "<group>"; };
 		CBA4F72024C99302004861B4 /* HypertonicHyponatremia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertonicHyponatremia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +214,7 @@
 				CB7356DA24DDFC270087A166 /* Isolates.swift */,
 				CB7356D824DDF90A0087A166 /* CAPManagement.swift */,
 				CB7356D324DBD2C70087A166 /* OutpatientCAP.swift */,
+				CB7356EB24DFAC430087A166 /* OutCAPManagement.swift */,
 				CB7356DC24DE143A0087A166 /* CAPToggle.swift */,
 			);
 			path = "Community Acquired Pneumonia";
@@ -312,6 +315,7 @@
 				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
+				CB7356EC24DFAC430087A166 /* OutCAPManagement.swift in Sources */,
 				CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */,
 				CB7356DD24DE143A0087A166 /* CAPToggle.swift in Sources */,
 				CB53C8F22483671200ED1821 /* MyTitleModifier.swift in Sources */,

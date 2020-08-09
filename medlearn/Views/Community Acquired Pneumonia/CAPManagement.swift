@@ -127,7 +127,7 @@ struct CAPManagement: View {
                             .font(.callout)
                             .fontWeight(.bold)
                             .padding(.top)
-                        Text("Add oseltamavir 75 mg po bid x 5 days (renal adjust if CrCl < 60 regardless of duration of flu symptoms")
+                        Text("Add oseltamavir 75 mg po bid x 5 days (renal adjust if CrCl < 60) regardless of duration of flu symptoms")
                             .font(.callout)
                             .padding()
                     }
