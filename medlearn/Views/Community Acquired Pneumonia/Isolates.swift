@@ -17,11 +17,11 @@ struct Isolates: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Additional questions")) {
-                    ShowToggle(binding: $capToggle.influenza, count: $capToggle.insignificantCount, text: "Is influenza positive?")
-                    ShowToggle(binding: $capToggle.mrsa, count: $capToggle.insignificantCount, text: "Prior respiratory isolation of MRSA?")
-                    ShowToggle(binding: $capToggle.pseudomonas, count: $capToggle.insignificantCount, text: "Prior respiratory isolation of P. aerugoinosa?")
-                    ShowToggle(binding: $capToggle.hospitalization, count: $capToggle.insignificantCount, text: "Hospitalized and treated with parenteral antibiotics in last 90 days?")
+                Section(header: Text("Select all that apply").font(.subheadline).fontWeight(.black).foregroundColor(Color.pink)) {
+                    ShowToggle(binding: $capToggle.influenza, count: $capToggle.insignificantCount, text: "Influenza is positive")
+                    ShowToggle(binding: $capToggle.mrsa, count: $capToggle.insignificantCount, text: "Prior respiratory isolation of MRSA")
+                    ShowToggle(binding: $capToggle.pseudomonas, count: $capToggle.insignificantCount, text: "Prior respiratory isolation of P. aerugoinosa")
+                    ShowToggle(binding: $capToggle.hospitalization, count: $capToggle.insignificantCount, text: "Hospitalized and treated with parenteral antibiotics in last 90 days")
                     
                     
                     

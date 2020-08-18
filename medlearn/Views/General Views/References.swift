@@ -11,9 +11,9 @@ import SwiftUI
 
 struct Citation {
     let topic: String
-    var first: String
-    var italicized: String
-    var last: String
+    let first: String
+    let italicized: String
+    let last: String
     
     init(topic: String, first: String, italicized: String, last: String) {
         self.topic = topic

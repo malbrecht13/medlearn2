@@ -63,6 +63,7 @@ struct OutCAPManagement: View {
                     Text("Clarithromycin 500 mg PO BID")
                     Text("Clarithromycin ER 1,000 mg PO daily")
                 }
+                Text("Note: macrolides should be used as monotherapy only if local pneuococcal resistance is < 25%").font(.footnote).padding()
             }
 
         }

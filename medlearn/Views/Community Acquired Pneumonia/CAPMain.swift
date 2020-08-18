@@ -15,6 +15,7 @@ struct CAPMain: View {
     @State private var siteSelection: Int = 0
     @State private var site: String? = nil
     
+    
     let siteOfTreatment = ["Inpatient", "Outpatient"]
     
     private let fillColor = Color.pink
@@ -41,10 +42,10 @@ struct CAPMain: View {
                     
                     NavigationLink(destination: InpatientCAP(), tag: "inpatient", selection: $site) {
                         EmptyView()
-                    }
+                    }.isDetailLink(false)
                     NavigationLink(destination: OutpatientCAP(), tag: "outpatient", selection: $site) {
                         EmptyView()
-                    }
+                    }.isDetailLink(false)
                     Button("Next") {
                         if self.siteSelection == 0 {
                             self.site = "inpatient"

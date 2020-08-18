@@ -8,20 +8,25 @@
 
 import SwiftUI
 
-struct MainMenuView: View {
+fileprivate let conditions = ["Hyponatremia", "Community-acquired pneumonia", "Venous thromboembolic disease"]
+fileprivate let sortedConditions = conditions.sorted{$0 < $1}
+fileprivate let views: [String: AnyView] = [
+    "Hyponatremia": AnyView(HyponatremiaCausesView()),
+    "Community-acquired pneumonia": AnyView(CAPMain()),
+    "Venous thromboembolic disease": AnyView(VTEMain())
+]
 
+struct MainMenuView: View {
+    
+    
+    
     
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: HyponatremiaCausesView()) {
+            List(sortedConditions, id: \.self) { condition in
+                NavigationLink(destination: views[condition]) {
                     VStack(alignment: .leading) {
-                        Text("Hyponatremia")
-                    }
-                }
-                NavigationLink(destination: CAPMain()) {
-                    VStack(alignment: .leading) {
-                        Text("Community Acquired Pneumonia")
+                        Text("\(condition)")
                     }
                 }
                 

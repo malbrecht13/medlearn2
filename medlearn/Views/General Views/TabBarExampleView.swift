@@ -21,6 +21,7 @@ struct TabBarExampleView: View {
                     Image(systemName: "waveform.path.ecg")
                     Text("Medical algorithms")
                     }
+            
 
                 
             
