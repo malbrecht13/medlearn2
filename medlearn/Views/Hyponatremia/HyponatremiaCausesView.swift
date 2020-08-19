@@ -12,7 +12,7 @@ struct HyponatremiaCausesView: View {
     
     @ObservedObject var na: Na = Na()
     
-    @State private var showingDetail = false
+    @State private var showInfoPopover = false
 
     
     private let plasmaOsm = ["<275 mOsm/L", "Normal", ">295 mOsm/L"]
@@ -36,12 +36,24 @@ struct HyponatremiaCausesView: View {
                 Text("Hyponatremia")
                     .modifier(MyTitleModifier(fillColor: fillColor))
                 
-                Text("Select any that apply.  However, some of the buttons below are disabled if not needed for the cause determination.  Press the 'Next' button at any time.")
-                    .font(.caption)
-                    .padding()
+                Button(action: {
+                    self.showInfoPopover.toggle()
+                }) {
+                    VStack {
+                        Image(systemName: "info.circle")
+                        .resizable()
+                            .frame(width: 30, height: 30, alignment: .center)
+                    }
+                }.popover(isPresented: $showInfoPopover, arrowEdge: .top) {
+                    self.infoPopoverContent()
+                }
+                
                 
                 VStack {
                     ShowTextfield(title: "Enter serum sodium", number: $na.na, units: "mg/dL", themeColor: fillColor)
+                    ShowTextfield(title: "Enter serum glucose", number: $na.glucose, units: "mg/dL", themeColor: fillColor)
+                    //this text uses a method called correctedSodium(na:glucose:)
+                    Text("Corrected serum sodium: \(correctedSodium(na: $na.na, glucose: $na.glucose))").fontWeight(.bold).foregroundColor(correctedSodium(na: $na.na, glucose: $na.glucose) == 0 ? Color.black : fillColor)
                 }
                 
                 
@@ -89,6 +101,31 @@ struct HyponatremiaCausesView: View {
             }
    
         }
+    
+    //MARK: - Methods
+    
+    func infoPopoverContent() -> some View {
+        VStack{
+            Text("This algorithm will walk you through how to diagnose and treat hyponatremia.  However, note that hyponatremia is very complex.  More than one cause may be present.  Volume status in individual patients is often difficult to define.  This is why the algorithm focuses on both history, exam, and lab values to give several ideas on what the problem might be.").padding(30)
+            Spacer()
+        }
+    }
+    
+    func correctedSodium(na: Binding<Double?>, glucose: Binding<Double?>) -> Int {
+        
+        
+        // unwrap the na and glucose.  If they are nil, return 0 for each
+        let na = Double(na.wrappedValue ?? 0)
+        let gluc = Double(glucose.wrappedValue ?? 0)
+        
+        if na == 0 || gluc == 0 {
+            return 0
+        }
+        
+        let result = Int(na + 1.6 * (gluc - 100) / 100)
+        
+        return result
+    }
 }
 
 
