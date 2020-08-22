@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB10F12A24EEFDDE001B5DB1 /* NaToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB10F12924EEFDDE001B5DB1 /* NaToggleView.swift */; };
+		CB10F12E24EF10D5001B5DB1 /* NaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB10F12D24EF10D5001B5DB1 /* NaHistory.swift */; };
+		CB10F13024F03BE9001B5DB1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB10F12F24F03BE9001B5DB1 /* Extensions.swift */; };
 		CB385D0C248839A900DB1E9C /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D0B248839A900DB1E9C /* SegmentedPickerModifier.swift */; };
 		CB385D14249C093900DB1E9C /* HypovolemicHyponatremiaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */; };
 		CB385D16249C1B9700DB1E9C /* TabBarExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB10F12924EEFDDE001B5DB1 /* NaToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaToggleView.swift; sourceTree = "<group>"; };
+		CB10F12D24EF10D5001B5DB1 /* NaHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaHistory.swift; sourceTree = "<group>"; };
+		CB10F12F24F03BE9001B5DB1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CB385D0B248839A900DB1E9C /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB385D13249C093900DB1E9C /* HypovolemicHyponatremiaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypovolemicHyponatremiaView.swift; sourceTree = "<group>"; };
 		CB385D15249C1B9700DB1E9C /* TabBarExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarExampleView.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			children = (
 				CB53C8DB24812F4400ED1821 /* AppDelegate.swift */,
 				CB53C8DD24812F4400ED1821 /* SceneDelegate.swift */,
+				CB10F12F24F03BE9001B5DB1 /* Extensions.swift */,
 				CB385D0E24883A4400DB1E9C /* Views */,
 				CB53C8E124812F4500ED1821 /* Assets.xcassets */,
 				CB53C8E624812F4500ED1821 /* LaunchScreen.storyboard */,
@@ -166,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				CB53C8EF2481317200ED1821 /* HyponatremiaCausesView.swift */,
+				CB10F12924EEFDDE001B5DB1 /* NaToggleView.swift */,
+				CB10F12D24EF10D5001B5DB1 /* NaHistory.swift */,
 				CBF65EBA24E7533100A6B833 /* Na.swift */,
 				CB7356C724DB51150087A166 /* Sheets - Hyponatremia */,
 			);
@@ -321,9 +330,11 @@
 				CB53C8DC24812F4400ED1821 /* AppDelegate.swift in Sources */,
 				CB7356C624D238C50087A166 /* HypovolemicTx.swift in Sources */,
 				CB67E0A024BA3AC60058EF1A /* HypovolemicHyponatremiaView2.swift in Sources */,
+				CB10F13024F03BE9001B5DB1 /* Extensions.swift in Sources */,
 				CBA4F72124C99302004861B4 /* HypertonicHyponatremia.swift in Sources */,
 				CB7356D224DBD2600087A166 /* InpatientCAP.swift in Sources */,
 				CB385D0C248839A900DB1E9C /* SegmentedPickerModifier.swift in Sources */,
+				CB10F12E24EF10D5001B5DB1 /* NaHistory.swift in Sources */,
 				CB53C8F02481317200ED1821 /* HyponatremiaCausesView.swift in Sources */,
 				CB385D14249C093900DB1E9C /* HypovolemicHyponatremiaView.swift in Sources */,
 				CBA4F71F24C99019004861B4 /* IsotonicHyponatremia.swift in Sources */,
@@ -343,6 +354,7 @@
 				CB7356BB24CE40460087A166 /* GradientButtonStyle.swift in Sources */,
 				CB5F45AC24CAE0F400D13E11 /* References.swift in Sources */,
 				CB67E0A624BD68590058EF1A /* LowUrineOsmView.swift in Sources */,
+				CB10F12A24EEFDDE001B5DB1 /* NaToggleView.swift in Sources */,
 				CB7356EC24DFAC430087A166 /* OutCAPManagement.swift in Sources */,
 				CB7356D624DD04D00087A166 /* ShowToggle.swift in Sources */,
 				CB7356DD24DE143A0087A166 /* CAPToggle.swift in Sources */,

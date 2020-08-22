@@ -11,30 +11,27 @@ import SwiftUI
 import Combine
 
 class Na: ObservableObject {
+    //character limits
+    let naCharLimit = 3
+    let glucCharLimit = 4
     
-    
-    //properties are validated to take in correct values to textfields
-    @Published var glucose: Double? {
+    //properties have character limits
+    @Published var glucose: String = "" {
         didSet {
-            if glucose != nil {
-                if !(glucose! >= 0.0 && glucose! <= 2000.0) {
-                    glucose = nil
-                }
+            if glucose.count > glucCharLimit {
+                glucose = String(glucose.prefix(glucCharLimit))
             }
         }
     }
-    @Published var na: Double? {
+    @Published var na: String = "" {
         didSet {
-            if na != nil {
-                if !(na! >= 0.0 && na! <= 250.0) {
-                    na = nil
-                }
+            if na.count > naCharLimit {
+                na = String(na.prefix(naCharLimit))
             }
-            
-            
         }
     }
     
+    @Published var correctedNa: Int = 0
     
     @Published var plasmaSelection: Int = 1
     @Published var urineSelection: Int = 0

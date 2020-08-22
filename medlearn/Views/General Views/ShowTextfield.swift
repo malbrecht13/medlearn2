@@ -12,7 +12,7 @@ import SwiftUI
 struct ShowTextfield: View {
     
     let title: String
-    @Binding var number: Double?
+    @Binding var number: String
     let units: String
     let themeColor: Color
     
@@ -27,13 +27,13 @@ struct ShowTextfield: View {
             Text(title)
                 .fontWeight(.semibold)
             HStack {
-                TextField("", value: $number, formatter: formatter)
-                    .keyboardType(.numberPad)
+                TextField("", text: $number)
+                    
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minWidth: 75, maxWidth: 100).border(number == nil ? Color.red : themeColor, width: 3).cornerRadius(3)
+                    .frame(minWidth: 75, maxWidth: 100).border(number == "" ? Color.clear : themeColor, width: 3).cornerRadius(3)
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 10)
-                    .keyboardType(.numberPad)
+                .keyboardType(.numberPad)
                 Text(units)
             }
         }
